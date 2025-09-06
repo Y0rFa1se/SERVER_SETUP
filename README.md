@@ -1,6 +1,6 @@
-# SERVER_SETUP
+# SERVER SETUP
 
-Execute this script as root following system updates and Git installation.
+**Execute this script as root following system updates and Git installation.**
 
 ## Example
 
@@ -8,6 +8,6 @@ Execute this script as root following system updates and Git installation.
 - su \-
 - apt update && apt upgrade -y
 - apt install git -y
-- git clone [repository url]
+- git clone https://github.com/Y0rFa1se/SERVER_SETUP.git
 - cd SERVER_SETUP
 - ./run.sh
