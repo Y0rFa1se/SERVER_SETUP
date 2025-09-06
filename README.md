@@ -1,6 +1,6 @@
 # SERVER_SETUP
 
-run this script as a root after update/upgrade and installation of git
+Execute this script as root following system updates and Git installation.
 
 ## Example
 
