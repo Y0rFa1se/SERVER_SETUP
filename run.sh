@@ -22,13 +22,16 @@ fi
 
 echo "Executing all scripts in '$TARGET_DIR'..."
 
-for file in "$TARGET_DIR"/*; do
+pushd "$TARGET_DIR" > /dev/null || exit 1
+
+for file in *; do
     if [ -f "$file" ]; then
         if [ ! -x "$file" ]; then
             chmod +x "$file"
         fi
         echo "Running: $file"
-        "$file"
+        "./$file"
     fi
 done
 
+popd > /dev/null || exit 1
