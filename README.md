@@ -1,11 +1,11 @@
 # SERVER_SETUP
 
-run this script after update/upgrade and installation of git
+run this script as a root after update/upgrade and installation of git
 
 ## Example
 
 ### debian/ubuntu
-- su
+- su \-
 - apt update && apt upgrade -y
 - apt install git -y
 - git clone [repository url]
