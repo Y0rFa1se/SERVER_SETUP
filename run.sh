@@ -24,14 +24,14 @@ echo "Executing all scripts in '$TARGET_DIR'..."
 
 pushd "$TARGET_DIR" > /dev/null || exit 1
 
-for file in *; do
-    if [ -f "$file" ]; then
-        if [ ! -x "$file" ]; then
-            chmod +x "$file"
-        fi
-        echo "Running: $file"
-        "./$file"
+if [ -f "setup.sh" ]; then
+    echo "Running setup.sh..."
+    if [ ! -x "setup.sh" ]; then
+        chmod +x "setup.sh"
     fi
-done
+    ./setup.sh
+else
+    echo "No setup.sh found in '$TARGET_DIR'."
+fi
 
 popd > /dev/null || exit 1
